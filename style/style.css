@@ -1,0 +1,106 @@
+body{
+    background: #F1F1F1!important;
+}
+p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 0!important;
+    color: #505050;
+}
+.plain_text{
+    font-size: 14px;
+    line-height: 16px;
+}
+.header_text{
+    font-size: 18px;
+    line-height: 21px;
+}
+.post p{
+    font-size: 16px;
+    line-height: 19px;
+}
+.timer p{
+    font-size: 16px;
+    line-height: 19px;
+}
+.post svg{
+    margin-right: 11px;
+    margin-left: 20px;
+}
+header{
+    z-index: 2;
+    min-height: 64px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+    margin-bottom: 2px;
+}
+nav{
+    z-index: 1;
+    min-height: 40px;
+    background: #FAFAFA;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.active{
+    background: #F1F1F1;
+}
+nav svg{
+    margin-right: 12px;
+}
+.wall{
+    width: 70%;
+}
+.post, .detail_post, .profile, .timer, .map{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.post{
+    min-height: 56px;
+}
+.detail_post svg{
+    margin-right: 13px;
+}
+.detail_post a{
+    color: #5095EC!important;
+}
+.quote{
+    border-color: #D3D8DE;
+}
+.detail_post img{
+    max-height: 400px;
+}
+svg{
+    vertical-align: 0!important;
+}
+.profile_header_text{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #505050;
+}
+.profile img{
+    width: 132px;
+    height: 132px;
+}
+.warn{
+    background-color: #E33939;
+    color:#FFFFFF;
+    padding-right: 6px;
+    padding-left: 6px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+}
+.text-muted{
+    color: #8F8F8F;
+}
+
+a {
+  text-decoration: none!important;
+  color: #505050!important;
+}
