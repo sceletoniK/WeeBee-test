@@ -1,5 +1,7 @@
+
 body{
     background: #F1F1F1!important;
+    
 }
 p{
     font-family: 'Roboto';
@@ -30,7 +32,6 @@ p{
 }
 header{
     z-index: 2;
-    min-height: 64px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
     background: #FFFFFF;
     margin-bottom: 2px;

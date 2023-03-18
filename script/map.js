@@ -15,7 +15,7 @@ function init() {
             coords,
             {
                 balloonContentHeader: geolocation.country,
-                balloonContent: geolocation.city,
+                balloonContent: geolocation.coords,
                 balloonContentFooter: geolocation.region
             }
         )
