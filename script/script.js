@@ -1,13 +1,12 @@
 var main = null
 routes = {}
-var root = "/WeeBee-test/"
-routes[window.location.origin + root] = "blocks/profile.html"
-routes[window.location.origin + root + "#map"] = "blocks/map.html"
-routes[window.location.origin + root + "#timer"] = "blocks/timer.html"
+routes[""] = "blocks/profile.html"
+routes["#map"] = "blocks/map.html"
+routes["#timer"] = "blocks/timer.html"
 
 async function addPage() {
     
-    const page = routes[window.location.href]
+    const page = routes[window.location.hash]
     const html = await fetch(page).then(res => res.text())
     main.innerHTML = html;
     switch(page)
