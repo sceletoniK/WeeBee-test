@@ -1,29 +1,29 @@
-
 var main = null
 routes = {}
-routes["/WeeBee-test/"] = "blocks/profile.html"
-routes["/WeeBee-test/map"] = "blocks/map.html"
-routes["/WeeBee-test/timer"] = "blocks/timer.html"
+var root = "/WeeBee-test/"
+routes[window.location.origin + root] = "blocks/profile.html"
+routes[window.location.origin + root + "#map"] = "blocks/map.html"
+routes[window.location.origin + root + "#timer"] = "blocks/timer.html"
 
 async function addPage() {
     
-    const page = window.location.pathname
-    const html = await fetch(routes[page]).then(res => res.text())
+    const page = routes[window.location.href]
+    const html = await fetch(page).then(res => res.text())
     main.innerHTML = html;
     switch(page)
     {
-        case("/WeeBee-test/"):
+        case("blocks/profile.html"):
             if (timePrinter != null) clearInterval(timePrinter)
             timePrinter = null
             links[0].classList.add("active")
             break;
-        case("/WeeBee-test/map"):
+        case("blocks/map.html"):
             if (timePrinter != null) clearInterval(timePrinter)
             timePrinter = null
             links[1].classList.add("active")
             ymaps.ready(init)
             break;  
-        case("/WeeBee-test/timer"):
+        case("blocks/timer.html"):
             if (timePrinter == null) timePrinter = setInterval(printTime, 1000);
             timerP = document.querySelector(".timer_text")
             printTime()
@@ -41,13 +41,16 @@ function Load(){
     window.onpopstate = changePage;
     main = document.querySelector('main')
     links = document.querySelectorAll('a')
-    links.forEach(item => 
+    links.forEach(item =>{
         item.addEventListener('click', (e) => {
-        e.stopPropagation();
-        e.preventDefault();
-        window.history.pushState({},'',item.href)
-        changePage(); 
-    }))
+            e.stopPropagation();
+            e.preventDefault();
+            window.history.pushState({},'',item.href)
+            changePage(); 
+        })
+    })
+    
     changePage()
 }
+
 
