@@ -1,5 +1,5 @@
-let main = null
-let links = null
+let main = undefined
+let links = undefined
 routes = {
     "": "blocks/profile.html",
     "#map": "blocks/map.html",
@@ -13,19 +13,19 @@ async function addPage() {
     main.innerHTML = html;
     switch(page)
     {
-        case("blocks/profile.html"):
-            if (timePrinter != null) clearInterval(timePrinter)
+        case(routes[""]):
+            clearInterval(timePrinter)
             timePrinter = null
             links[0].classList.add("active")
             break;
-        case("blocks/map.html"):
-            if (timePrinter != null) clearInterval(timePrinter)
+        case(routes["#map"]):
+            clearInterval(timePrinter)
             timePrinter = null
             links[1].classList.add("active")
             ymaps.ready(init)
             break;  
-        case("blocks/timer.html"):
-            if (timePrinter == null) timePrinter = setInterval(printTime, 1000);
+        case(routes["#timer"]):
+            if (!timePrinter) timePrinter = setInterval(printTime, 1000);
             timerP = document.querySelector(".timer_text")
             printTime()
             links[2].classList.add("active")
@@ -42,9 +42,8 @@ function Load(){
 
     main = window.document.querySelector("main")
     links = window.document.querySelectorAll("a")
-
-    changePage()
     window.addEventListener("hashchange", changePage)
+    changePage()
 }
 
 
