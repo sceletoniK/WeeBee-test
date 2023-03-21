@@ -26,10 +26,6 @@ p{
     font-size: 16px;
     line-height: 19px;
 }
-.post svg{
-    margin-right: 11px;
-    margin-left: 20px;
-}
 header{
     z-index: 2;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
@@ -45,11 +41,8 @@ nav{
 .active{
     background: #F1F1F1;
 }
-nav svg{
+.svg_img{
     margin-right: 12px;
-}
-.wall{
-    width: 70%;
 }
 .post, .detail_post, .profile, .timer, .map{
     background: #FFFFFF;
@@ -72,16 +65,13 @@ nav svg{
 .detail_post img{
     max-height: 400px;
 }
-svg{
-    vertical-align: 0!important;
-}
 .profile_header_text{
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
     color: #505050;
 }
-.profile img{
+.avatar_img{
     width: 132px;
     height: 132px;
 }
