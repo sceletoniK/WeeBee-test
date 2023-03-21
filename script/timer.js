@@ -1,14 +1,13 @@
-var time = 0
-var timePrinter = null
-var timer = setInterval(() => {
-    time++
+let timePrinter = undefined
+let time = 0
+let timer = setInterval(() => {
+    time++;
 }, 1000);
-var timerP = null
 
 function printTime(){
-    var hour = (Math.floor(time / 3600)) 
-    var min = (Math.floor(time / 60)) % 60
-    var sec = (time % 60)
-    var timestring = '' + Math.floor(hour/10) + (hour % 10) + ':' + Math.floor(min/10) + (min % 10) + ':' + Math.floor(sec/10) + (sec % 10)
+    let hour = (Math.floor(time / 3600))
+    let min = (Math.floor(time / 60)) % 60
+    let sec = (time % 60)
+    let timestring = `${Math.floor(hour/10)}${(hour % 10)}:${Math.floor(min/10)}${(min % 10)}:${Math.floor(sec/10)}${(sec % 10)}`
     timerP.innerText = timestring;
 }
