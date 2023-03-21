@@ -1,8 +1,10 @@
-var main = null
-routes = {}
-routes[""] = "blocks/profile.html"
-routes["#map"] = "blocks/map.html"
-routes["#timer"] = "blocks/timer.html"
+let main = null
+let links = null
+routes = {
+    "": "blocks/profile.html",
+    "#map": "blocks/map.html",
+    "#timer": "blocks/timer.html"
+}
 
 async function addPage() {
     
@@ -37,19 +39,12 @@ function changePage(){
 }
 
 function Load(){
-    window.onpopstate = changePage;
-    main = document.querySelector('main')
-    links = document.querySelectorAll('a')
-    links.forEach(item =>{
-        item.addEventListener('click', (e) => {
-            e.stopPropagation();
-            e.preventDefault();
-            window.history.pushState({},'',item.href)
-            changePage(); 
-        })
-    })
-    
+
+    main = window.document.querySelector("main")
+    links = window.document.querySelectorAll("a")
+
     changePage()
+    window.addEventListener("hashchange", changePage)
 }
 
 
