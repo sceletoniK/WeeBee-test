@@ -2,7 +2,7 @@
 function init() {
     document.querySelector('#loader').classList.add('d-none')
     document.querySelector('#map-container').classList.remove('d-none')
-    var geolocation = ymaps.geolocation,
+    let geolocation = ymaps.geolocation,
 
         coords = [geolocation.latitude, geolocation.longitude],
         myMap = new ymaps.Map('map-container', {

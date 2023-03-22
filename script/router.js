@@ -1,10 +1,12 @@
-let main = undefined
-let links = undefined
+let main;
+let links;
 routes = {
     "": "blocks/profile.html",
     "#map": "blocks/map.html",
     "#timer": "blocks/timer.html"
 }
+
+window.onload = Load
 
 async function addPage() {
     
@@ -14,13 +16,17 @@ async function addPage() {
     switch(page)
     {
         case(routes[""]):
-            clearInterval(timePrinter)
-            timePrinter = null
+            if(timePrinter){
+                clearInterval(timePrinter)
+                timePrinter = undefined
+            }
             links[0].classList.add("active")
             break;
         case(routes["#map"]):
-            clearInterval(timePrinter)
-            timePrinter = null
+            if(timePrinter){
+                clearInterval(timePrinter)
+                timePrinter = undefined
+            }
             links[1].classList.add("active")
             ymaps.ready(init)
             break;  
