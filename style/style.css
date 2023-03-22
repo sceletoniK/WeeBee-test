@@ -1,8 +1,7 @@
-
-body{
+.body{
     --bs-body-bg: #F1F1F1  
 }
-p{
+.p_text{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -26,13 +25,13 @@ p{
     font-size: 16px;
     line-height: 19px;
 }
-header{
+.header_row{
     z-index: 2;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
     background: #FFFFFF;
     margin-bottom: 2px;
 }
-nav{
+.nav_row{
     z-index: 1;
     min-height: 40px;
     background: #FAFAFA;
@@ -95,7 +94,7 @@ nav{
     color: #8F8F8F;
 }
 
-body a {
+.a {
   text-decoration: none;
   color: #505050;
 }
