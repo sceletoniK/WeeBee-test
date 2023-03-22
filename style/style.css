@@ -80,7 +80,6 @@
     height: 132px;
 }
 .warn{
-    background-color: #E33939;
     color:#FFFFFF;
     padding-right: 6px;
     padding-left: 6px;
@@ -98,4 +97,23 @@
 .a {
   text-decoration: none;
   color: #505050;
+}
+.box_margin{
+    min-height: 60px;
+}
+.box_margin_2{
+    min-height: 37px;
+}
+.loader{
+    width: 100%; 
+    height: 100%; 
+    border-width: 2rem;
+}
+.profile .textarea{
+    width: 85%; 
+    min-height: 88px; 
+    resize: none;
+}
+.profile .btn{
+    width: 85%;
 }
