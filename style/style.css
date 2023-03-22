@@ -17,11 +17,11 @@
     line-height: 21px;
     margin-bottom: 0;
 }
-.post p{
+.post .p_text{
     font-size: 16px;
     line-height: 19px;
 }
-.timer p{
+.timer .p_text{
     font-size: 16px;
     line-height: 19px;
 }
@@ -43,7 +43,7 @@
 .svg_img{
     margin-right: 12px;
 }
-.detail_post p{
+.detail_post .p_text{
     margin-bottom: 0;
 }
 
@@ -53,13 +53,8 @@
     margin-top: 16px;
     margin-bottom: 16px;
 }
-.post{
-    min-height: 56px;
-}
-.detail_post svg{
-    margin-right: 13px;
-}
-.detail_post a{
+
+.detail_post .link{
     color: #5095EC;
 }
 .quote{
@@ -94,7 +89,7 @@
     color: #8F8F8F;
 }
 
-.a {
+.link {
   text-decoration: none;
   color: #505050;
 }
